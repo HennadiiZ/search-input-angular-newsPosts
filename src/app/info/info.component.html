@@ -1,0 +1,32 @@
+
+<div class="container">
+    <div class="search">
+        <input type="text" class="input" [(ngModel)]="searchResults" placeholder="Search...">
+        <br>
+        <p>Results: {{ resCounter }} </p>
+    </div>
+    <div class="row">
+        <a class="content-wrappeer" (click)="getPost()">
+            <!-- <div *ngFor="let article of articles | filter: searchResults" class="content-card"> -->
+            <!-- <div *ngFor="let article of articles | filterpipe: searchResults" class="content-card">
+                <div class="img_item"><img src="{{article.img}}" ></div>
+                <p><small>{{article.date}}</small></p>
+                <H2>{{article.title}}</H2>
+                <p>{{article.article.slice(0, 100)}}...</p>
+            </div> -->
+        </a>
+    </div>
+
+    <div class="row">
+        <a class="content-wrappeer">
+            <!-- <div *ngFor="let article of news | filterpipe: searchResults" class="content-card"> -->
+            <div *ngFor="let article of news | filterpipe: searchResults" class="content-card">    
+                <div class="img_item"><img src="{{article.imageUrl}}" ></div>
+                <p><small>{{article.updatedAt | date}}</small></p>
+                <h3 class="title">{{article.title}}</h3>
+                <p class="text"> {{article.summary.slice(0, 100)}}...</p>
+                <h5 class="read-more" (click)="getPost()" >Read more... &#8594;</h5>
+            </div>
+        </a>
+    </div>
+</div>
