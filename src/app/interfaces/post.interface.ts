@@ -22,9 +22,3 @@ export interface News {
     events: any
 }
 
-export interface Todo {
-    userId?: number
-    id?: number
-    title: string
-    completed: boolean
-}

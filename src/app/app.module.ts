@@ -8,6 +8,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filterpipe.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { PostComponent } from './post/post.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     InfoComponent,
     FilterPipe,
+    PostComponent,
    
   ],
   imports: [

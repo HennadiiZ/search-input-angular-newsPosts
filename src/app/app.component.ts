@@ -7,11 +7,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit {
   
-  constructor(private httpClient: HttpClient){
-
-  }
+  constructor(private httpClient: HttpClient){ }
 
   ngOnInit(){
-     this.httpClient.get("https://jsonplaceholder.typicode.com/todos?_limit=9")
+     
   }
 }
