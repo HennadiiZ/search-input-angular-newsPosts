@@ -7,16 +7,14 @@
     </div>
     <div class="row">
         <a class="content-wrappeer">
-            <!-- <div *ngFor="let article of news | filter: searchResults" class="content-card"> -->
             <div *ngFor="let article of news | filterpipe: searchResults" class="content-card">    
                 <div class="img_item"><img src="{{article.imageUrl}}" ></div>
                 <p><small>{{article.updatedAt | date}}</small></p>
                 <h3 class="title">{{article.title}}</h3>
                 <p class="text"> {{article.summary.slice(0, 100)}}...</p>
-                <h5 class="read-more" (click)="getPost()" >Read more... &#8594;</h5>
+                <h5 class="read-more" [routerLink]="['/posts', article.id]" (click)="getPost(article.id)">Read more... &#8594;</h5>
             </div>
         </a>
     </div>
 </div>
 
-<app-post></app-post>

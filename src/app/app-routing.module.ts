@@ -4,9 +4,10 @@ import { InfoComponent } from './info/info.component';
 import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
-  {path: '', component: InfoComponent, children: [
-    {path: 'post', component: PostComponent},
-  ]}
+  {path: 'posts', component: InfoComponent, children: [
+    // {path: 'post', component: PostComponent},
+  ]},
+  {path: 'posts/:id', component: PostComponent},
 ];
 
 @NgModule({
