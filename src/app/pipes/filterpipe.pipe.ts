@@ -6,15 +6,13 @@ import { News, Post } from '../interfaces/post.interface';
 })
 export class FilterPipe implements PipeTransform {
 
-  // transform(posts: Post[], searchResults = '', resCounter = 0): Post[] {
-  transform(posts: News[], searchResults = '', resCounter = 0): News[] {
+  transform(posts: News[], searchResults = ''): News[] {
     if(!searchResults.trim()){
       return posts
     }
 
       return posts.filter(post => {
-        // return post.title.toLowerCase().includes(searchResults) || post.article.toLowerCase().includes(searchResults)
-        return post.title.toLowerCase().includes(searchResults) || post.summary.toLowerCase().includes(searchResults)
+            return post.title.toLowerCase().includes(searchResults) || post.summary.toLowerCase().includes(searchResults)
       })
   }
 
