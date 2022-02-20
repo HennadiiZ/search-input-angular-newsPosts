@@ -22,12 +22,9 @@ export class PostComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params:Params) => {
-      console.log(params);
       this.post = this.getPostService.getPostById(+params['id'])
-      console.log( "WHERE IS MY POST? ", this.post)
     })
   }
-
 
   goBack(){
     this.router.navigate(['/posts']);

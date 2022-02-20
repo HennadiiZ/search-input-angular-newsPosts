@@ -1,7 +1,9 @@
-<div class="image_body main-block__image _ibg">
-    <img src="{{ post.imageUrl }}" alt="{{ post.title }}">
-</div> 
+<div class="wrapper">
 <div class="container">
+
+    <div class="image_body main-block__image _ibg">
+        <img src="{{ post.imageUrl }}" alt="{{ post.title }}">
+    </div> 
 
     <div class="post_body">
         <h3 class="title">{{ post.title}}</h3>
@@ -10,8 +12,9 @@
         <p class="text"> {{ post.summary }} {{ post.summary }} {{ post.summary }} {{ post.summary }} {{ post.summary }}</p>
     </div>
 
-   <div class="button_body ">   
-    <h5 (click)="goBack()">&#8592; Back to Homepage</h5>
+   <div class="button_body">   
+        <h5 (click)="goBack()" style="cursor: pointer">&#8592; Back to Homepage</h5>
    </div>
 
+</div>
 </div>

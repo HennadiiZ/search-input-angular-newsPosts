@@ -4,6 +4,7 @@ import { InfoComponent } from './info/info.component';
 import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
+  {path: '', redirectTo: '/posts', pathMatch: 'full'},
   {path: 'posts', component: InfoComponent, children: [
     // {path: 'post', component: PostComponent},
   ]},
